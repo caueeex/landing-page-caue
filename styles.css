@@ -1010,17 +1010,18 @@
   }
   
   .stats-grid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 4rem;
     background: hsla(210, 20%, 96%, 0.5);
     border-radius: 1.5rem;
     padding: 2rem;
+    display: block;
   }
   
   .stat-item {
     text-align: center;
+    margin-top: 10px !important;
   }
   
   .stat-number {
@@ -1116,8 +1117,7 @@
   .features-list li {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    justify-content: center;
+    gap: 10px;
     color: var(--secondary-foreground);
   }
   
