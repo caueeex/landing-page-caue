@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HandPro - Curso completo de handebol profissional. Aprenda técnicas, táticas e estratégias com um treinador com mais de 15 anos de experiência.">
+  <title>HandPro - Curso de Handebol Profissional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-content">
+      <a href="#" class="logo">Hand<span>Pro</span></a>
+      
+      <nav class="nav-desktop" id="nav-desktop">
+        <button onclick="scrollToSection('professor')">Professor</button>
+        <button onclick="scrollToSection('conteudo')">Conteúdo</button>
+        <button onclick="scrollToSection('beneficios')">Benefícios</button>
+        <button onclick="scrollToSection('inscricao')">Inscrição</button>
+        <button onclick="scrollToSection('inscricao')" class="btn-cta btn-nav">Inscreva-se</button>
+      </nav>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <svg class="icon-menu" id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="icon-close hidden" id="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="nav-mobile hidden" id="nav-mobile">
+      <button onclick="scrollToSection('professor')">Professor</button>
+      <button onclick="scrollToSection('conteudo')">Conteúdo</button>
+      <button onclick="scrollToSection('beneficios')">Benefícios</button>
+      <button onclick="scrollToSection('inscricao')">Inscrição</button>
+      <button onclick="scrollToSection('inscricao')" class="btn-cta">Inscreva-se</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop" alt="Jogador de handebol em ação">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="badge animate-fade-in">
+          <span class="badge-dot"></span>
+          <span>Vagas Limitadas — Turma de Janeiro 2025</span>
+        </div>
+
+        <h1 class="animate-fade-in delay-1">
+          Domine o <span class="text-primary">Handebol</span> com Treinamento Profissional
+        </h1>
+
+        <p class="hero-subtitle animate-fade-in delay-2">
+          Aprenda técnicas, táticas e estratégias do handebol moderno com um treinador com mais de 15 anos de experiência em competições nacionais e internacionais.
+        </p>
+
+        <div class="hero-buttons animate-fade-in delay-3">
+          <button onclick="scrollToSection('inscricao')" class="btn-cta">
+            Quero Me Inscrever
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <button class="btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            Assistir Apresentação
+          </button>
+        </div>
+
+        <div class="social-proof animate-fade-in delay-4">
+          <div class="proof-item">
+            <p class="proof-number">500+</p>
+            <p class="proof-label">Alunos Formados</p>
+          </div>
+          <div class="proof-divider"></div>
+          <div class="proof-item">
+            <p class="proof-number">4.9</p>
+            <p class="proof-label">Avaliação Média</p>
+          </div>
+          <div class="proof-divider"></div>
+          <div class="proof-item">
+            <p class="proof-number">15+</p>
+            <p class="proof-label">Anos de Experiência</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coach Section -->
+  <section id="professor" class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Conheça Seu Instrutor</span>
+        <h2>Aprenda com Quem <span class="text-primary">Já Formou Campeões</span></h2>
+        <p>Professor Carlos Silva traz sua experiência de mais de uma década no handebol profissional direto para você</p>
+      </div>
+
+      <div class="coach-grid">
+        <div class="coach-image-container animate-slide-left">
+          <div class="coach-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=750&fit=crop" alt="Professor Carlos Silva - Treinador de Handebol">
+            <div class="coach-image-overlay"></div>
+            <div class="coach-card">
+              <h3>Prof. Carlos Silva</h3>
+              <p>Treinador Profissional de Handebol</p>
+            </div>
+          </div>
+          <div class="decorative-circle decorative-1"></div>
+          <div class="decorative-circle decorative-2"></div>
+        </div>
+
+        <div class="credentials animate-slide-right">
+          <div class="credential-card">
+            <div class="credential-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+            </div>
+            <div class="credential-content">
+              <h4>15+ Anos de Experiência</h4>
+              <p>Atuando como técnico e preparador físico em clubes de alto rendimento</p>
+            </div>
+          </div>
+
+          <div class="credential-card">
+            <div class="credential-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+            </div>
+            <div class="credential-content">
+              <h4>Licenciatura em Educação Física</h4>
+              <p>Formação acadêmica pela Universidade Federal com especialização em esportes coletivos</p>
+            </div>
+          </div>
+
+          <div class="credential-card">
+            <div class="credential-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg>
+            </div>
+            <div class="credential-content">
+              <h4>Campeão Estadual 3x</h4>
+              <p>Conquistou 3 títulos estaduais consecutivos como técnico principal</p>
+            </div>
+          </div>
+
+          <div class="credential-card">
+            <div class="credential-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="credential-content">
+              <h4>Seleção Brasileira Sub-21</h4>
+              <p>Atuou como assistente técnico na equipe nacional juvenil</p>
+            </div>
+          </div>
+
+          <div class="credential-card">
+            <div class="credential-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+            </div>
+            <div class="credential-content">
+              <h4>Certificação Internacional IHF</h4>
+              <p>Certificado pela Federação Internacional de Handebol para coaching avançado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Content Section -->
+  <section id="conteudo" class="section bg-muted">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">O Que Você Vai Aprender</span>
+        <h2>8 Módulos Completos de <span class="text-primary">Handebol Profissional</span></h2>
+        <p>Um programa estruturado que cobre desde os fundamentos até táticas avançadas usadas em competições de alto nível</p>
+      </div>
+
+      <div class="modules-grid">
+        <div class="module-card">
+          <span class="module-number">01</span>
+          <div class="module-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          </div>
+          <h3>Fundamentos Técnicos</h3>
+          <p>Domínio da bola, postura corporal, movimentação básica e coordenação motora específica do handebol.</p>
+          <div class="module-topics">
+            <span>Empunhadura</span>
+            <span>Deslocamentos</span>
+            <span>Recepção</span>
+            <span>Condução</span>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-number">02</span>
+          <div class="module-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <h3>Passes e Arremessos</h3>
+          <p>Técnicas de passe de ombro, por trás, quicado, e arremessos com apoio e em suspensão.</p>
+          <div class="module-topics">
+            <span>Passe de ombro</span>
+            <span>Passe picado</span>
+            <span>Arremesso apoiado</span>
+            <span>Arremesso em suspensão</span>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-number">03</span>
+          <div class="module-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+          </div>
+          <h3>Sistema Defensivo</h3>
+          <p>Posicionamento individual, sistemas 6:0, 5:1 e 3:2:1, marcação individual e coletiva.</p>
+          <div class="module-topics">
+            <span>Postura defensiva</span>
+            <span>Sistemas táticos</span>
+            <span>Bloqueio</span>
+            <span>Antecipação</span>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-number">04</span>
+          <div class="module-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>Táticas Ofensivas</h3>
+          <p>Movimentações de ataque, cruzamentos, bloqueios ofensivos e contra-ataques.</p>
+          <div class="module-topics">
+            <span>Contra-ataque</span>
+            <span>Ataque posicional</span>
+            <span>Cruzamentos</span>
+            <span>Finalizações</span>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-number">05</span>
+          <div class="module-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 14.4 9.6 9.6"></path><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"></path><path d="m21.5 21.5-1.4-1.4"></path><path d="M3.9 3.9 2.5 2.5"></path><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"></path></svg>
+          </div>
+          <h3>Preparação Física</h3>
+          <p>Condicionamento específico, força, velocidade, resistência e prevenção de lesões.</p>
+          <div class="module-topics">
+            <span>Força explosiva</span>
+            <span>Agilidade</span>
+            <span>Resistência</span>
+            <span>Flexibilidade</span>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-number">06</span>
+          <div class="module-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+          </div>
+          <h3>Regras e Arbitragem</h3>
+          <p>Regulamento oficial do handebol, sinalizações, infrações e condutas disciplinares.</p>
+          <div class="module-topics">
+            <span>Regras básicas</span>
+            <span>Infrações</span>
+            <span>Sinalizações</span>
+            <span>Cartões</span>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-number">07</span>
+          <div class="module-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path><path d="M12 18v-7"></path></svg>
+          </div>
+          <h3>Psicologia do Esporte</h3>
+          <p>Mentalidade vencedora, controle emocional, liderança e trabalho em equipe.</p>
+          <div class="module-topics">
+            <span>Foco mental</span>
+            <span>Gestão de pressão</span>
+            <span>Motivação</span>
+            <span>Comunicação</span>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-number">08</span>
+          <div class="module-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+          </div>
+          <h3>Análise de Jogo</h3>
+          <p>Leitura de jogo, análise de adversários, scout e planejamento estratégico.</p>
+          <div class="module-topics">
+            <span>Análise tática</span>
+            <span>Scout</span>
+            <span>Estratégias</span>
+            <span>Adaptações</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-cta">
+        <button onclick="scrollToSection('inscricao')" class="btn-cta">Garantir Minha Vaga Agora</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="beneficios" class="section bg-secondary">
+    <div class="container">
+      <div class="section-header section-header-light">
+        <span class="section-badge section-badge-light">Por Que Escolher Este Curso</span>
+        <h2>Tudo Que Você Precisa Para <span class="text-primary">Evoluir</span></h2>
+        <p>Oferecemos uma experiência completa de aprendizado com recursos exclusivos para maximizar seu desenvolvimento</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg>
+          </div>
+          <h3>60+ Horas de Conteúdo</h3>
+          <p>Aulas em vídeo HD com demonstrações práticas e explicações detalhadas</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3>Acesso Vitalício</h3>
+          <p>Estude no seu ritmo, quando e onde quiser, para sempre</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+          </div>
+          <h3>Suporte Direto</h3>
+          <p>Tire dúvidas diretamente com o professor via comunidade exclusiva</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </div>
+          <h3>Material Complementar</h3>
+          <p>PDFs, exercícios práticos e planilhas de treinamento para download</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg>
+          </div>
+          <h3>Atualizações Gratuitas</h3>
+          <p>Receba novas aulas e conteúdos sem custo adicional</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+          </div>
+          <h3>Certificado de Conclusão</h3>
+          <p>Certificado reconhecido para comprovar sua qualificação</p>
+        </div>
+      </div>
+
+      <div class="guarantee-box">
+        <div class="guarantee-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+        </div>
+        <h3>Garantia de 7 Dias</h3>
+        <p>Se dentro de 7 dias você não ficar satisfeito com o curso, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Depoimentos</span>
+        <h2>O Que Nossos <span class="text-primary">Alunos Dizem</span></h2>
+        <p>Histórias reais de pessoas que transformaram seu conhecimento em handebol através do nosso curso</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-content">"O curso mudou completamente minha forma de ensinar handebol. As táticas apresentadas são práticas e aplicáveis imediatamente. Minha equipe evoluiu muito!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Marcelo Ferreira">
+            <div>
+              <h4>Marcelo Ferreira</h4>
+              <p>Técnico de Handebol Escolar</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-content">"Nunca pensei que poderia aprender tanto sobre handebol online. O professor explica de forma clara e os exercícios práticos fazem toda diferença no treino."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Juliana Santos">
+            <div>
+              <h4>Juliana Santos</h4>
+              <p>Atleta Amadora</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-content">"Excelente material! Uso o conteúdo nas minhas aulas e os alunos adoram. O módulo de preparação física é completo e muito bem estruturado."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Roberto Almeida">
+            <div>
+              <h4>Roberto Almeida</h4>
+              <p>Professor de Educação Física</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <p class="stat-number">500+</p>
+          <p class="stat-label">Alunos Ativos</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-number">4.9</p>
+          <p class="stat-label">Nota Média</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-number">98%</p>
+          <p class="stat-label">Taxa de Satisfação</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-number">60h</p>
+          <p class="stat-label">De Conteúdo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="inscricao" class="section cta-section">
+    <div class="cta-pattern"></div>
+    <div class="container cta-container">
+      <div class="cta-content">
+        <span class="section-badge section-badge-light">Oferta Especial de Lançamento</span>
+        <h2>Comece Sua Jornada no <span class="text-primary">Handebol Profissional</span></h2>
+        <p>Inscreva-se agora e receba acesso completo ao curso com um desconto exclusivo de lançamento. Vagas limitadas!</p>
+
+        <div class="price-container">
+          <span class="price-original">R$ 997</span>
+          <span class="price-current">R$ 497</span>
+        </div>
+        <p class="price-installment">ou 12x de R$ 49,70 sem juros</p>
+
+        <ul class="features-list">
+          <li>
+            <div class="check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            Acesso imediato a todas as aulas
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            Comunidade exclusiva de alunos
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            Certificado de conclusão
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            Garantia de 7 dias
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-container" id="form-container">
+        <div id="form-view">
+          <h3>Garanta Sua Vaga Agora</h3>
+          <form id="lead-form">
+            <div class="input-group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+            </div>
+            <div class="input-group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
+            </div>
+            <div class="input-group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <input type="tel" id="phone" name="phone" placeholder="Seu WhatsApp" required>
+            </div>
+            <button type="submit" class="btn-cta btn-full">
+              Quero Me Inscrever
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+          <p class="form-disclaimer">🔒 Seus dados estão seguros e não serão compartilhados</p>
+        </div>
+
+        <div id="success-view" class="hidden">
+          <div class="success-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h3>Inscrição Confirmada!</h3>
+          <p>Verifique seu e-mail para acessar o curso. Bem-vindo à nossa comunidade de atletas!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">Hand<span>Pro</span></a>
+          <p>Transformando jogadores amadores em atletas completos através de metodologia profissional de ensino.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#professor">Sobre o Professor</a></li>
+            <li><a href="#conteudo">Conteúdo do Curso</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#inscricao">Inscrição</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <ul>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              contato@handpro.com.br
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              (11) 99999-9999
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 HandPro. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
