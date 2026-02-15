@@ -240,6 +240,32 @@
   .btn-full {
     width: 100%;
   }
+
+  .btn-whatsapp {
+    background: var(--gradient-cta);
+    color: var(--primary-foreground);
+    box-shadow: var(--shadow-cta);
+  }
+
+  .btn-whatsapp:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .cta-whatsapp-box {
+    text-align: center;
+  }
+
+  .cta-whatsapp-text {
+    font-size: 0.95rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .cta-whatsapp-btn {
+    gap: 0.75rem;
+    font-size: 1.125rem;
+  }
   
   /* === Header === */
   .header {
@@ -282,10 +308,18 @@
     gap: 2rem;
   }
   
+  .nav-desktop button:not(.btn-cta),
+  .nav-desktop a.btn-cta {
+    font-weight: 500;
+  }
+
   .nav-desktop button:not(.btn-cta) {
     color: hsla(0, 0%, 100%, 0.8);
-    font-weight: 500;
     transition: color 0.3s ease;
+  }
+
+  .nav-desktop a.btn-cta {
+    color: var(--primary-foreground);
   }
   
   .nav-desktop button:not(.btn-cta):hover {
@@ -412,7 +446,6 @@
     color: hsla(0, 0%, 100%, 0.8);
     margin-bottom: 2rem;
     max-width: 40rem;
-    margin-left: auto;
     margin-right: auto;
   }
   
@@ -676,6 +709,13 @@
     background: hsla(200, 85%, 50%, 0.2);
   }
   
+  .coach-bio {
+    font-size: 1rem;
+    color: var(--muted-foreground);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
   .credentials {
     display: flex;
     flex-direction: column;

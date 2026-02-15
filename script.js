@@ -40,28 +40,53 @@ function scrollToSection(sectionId) {
   }
 }
 
-// === Form Submission ===
+// === Form Submission → WhatsApp ===
+// Substitua pelo número real (DDD + número, ex: 5512999123456)
+const WHATSAPP_NUMBER = '5512996225813';
+
 const leadForm = document.getElementById('lead-form');
 const formView = document.getElementById('form-view');
 const successView = document.getElementById('success-view');
 
-leadForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  // Get form data
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value
-  };
-  
-  // Log form data (in production, send to backend)
-  console.log('Form submitted:', formData);
-  
-  // Show success message
-  formView.classList.add('hidden');
-  successView.classList.remove('hidden');
-});
+if (leadForm) {
+  leadForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+
+    // Monta a mensagem que será enviada no WhatsApp
+    const message = [
+      'Olá, Matheus! Gostaria de agendar uma aula de handebol.',
+      '',
+      '*Meus dados:*',
+      'Nome: ' + name,
+      'E-mail: ' + email,
+      'WhatsApp: ' + phone
+    ].join('\n');
+
+    const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+    window.open(url, '_blank', 'noopener');
+
+    if (formView) formView.classList.add('hidden');
+    if (successView) successView.classList.remove('hidden');
+  });
+}
+
+// === Phone Input Mask (Brazilian Format) ===
+const phoneInput = document.getElementById('phone');
+if (phoneInput) {
+  phoneInput.addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length <= 11) {
+      if (value.length <= 2) value = value.replace(/^(\d{0,2})/, '($1');
+      else if (value.length <= 7) value = value.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+      else value = value.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+    }
+    e.target.value = value;
+  });
+}
 
 // === Intersection Observer for Animations ===
 const observerOptions = {
@@ -83,25 +108,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.animate-fade-in, .animate-slide-left, .animate-slide-right').forEach(el => {
   el.style.animationPlayState = 'paused';
   observer.observe(el);
-});
-
-// === Phone Input Mask (Brazilian Format) ===
-const phoneInput = document.getElementById('phone');
-
-phoneInput.addEventListener('input', function(e) {
-  let value = e.target.value.replace(/\D/g, '');
-  
-  if (value.length <= 11) {
-    if (value.length <= 2) {
-      value = value.replace(/^(\d{0,2})/, '($1');
-    } else if (value.length <= 7) {
-      value = value.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
-    } else {
-      value = value.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
-    }
-  }
-  
-  e.target.value = value;
 });
 
 // === Scroll Animation on Page Load ===
@@ -128,8 +134,8 @@ function highlightNavigation() {
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       navButtons.forEach(btn => {
         btn.style.color = '';
-        if (btn.textContent.toLowerCase() === sectionId || 
-            (sectionId === 'inscricao' && btn.textContent === 'Inscrição')) {
+        const text = btn.textContent.trim().toLowerCase();
+        if (text === sectionId || (sectionId === 'inscricao' && (text.includes('agendar') || text === 'inscrição'))) {
           btn.style.color = 'hsl(45, 100%, 50%)';
         }
       });
