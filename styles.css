@@ -1064,6 +1064,7 @@
     display: grid;
     gap: 3rem;
     align-items: center;
+    grid-template-columns: 1fr;
   }
   
   .cta-content {
@@ -1080,6 +1081,52 @@
     font-size: 1.125rem;
     color: hsla(0, 0%, 100%, 0.8);
     margin-bottom: 2rem;
+  }
+  
+  /* CTA Section - Mobile */
+  @media (max-width: 767px) {
+    .cta-section.section {
+      padding: 2.5rem 0;
+    }
+    .cta-section .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .cta-container {
+      gap: 2rem;
+    }
+    .cta-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .cta-content > p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .cta-content .features-list {
+      margin-bottom: 1.5rem;
+      gap: 0.6rem;
+    }
+    .cta-content .features-list li {
+      white-space: normal;
+      text-align: left;
+      justify-content: flex-start;
+    }
+    .cta-content .section-badge {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.75rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta-content h2 {
+      font-size: 1.35rem;
+    }
+    .cta-content > p {
+      font-size: 0.9375rem;
+    }
   }
   
   .price-container {
@@ -1355,6 +1402,85 @@
     .pricing-features-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 0.75rem;
+    }
+  }
+  
+  /* Pricing card - Mobile */
+  @media (max-width: 767px) {
+    .pricing-card {
+      padding: 1.5rem 1.25rem;
+      border-radius: 1.25rem;
+    }
+    .pricing-badge {
+      padding: 0.45rem 1rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+    }
+    .pricing-hero {
+      padding: 0.875rem 0 1rem;
+      margin-bottom: 0.875rem;
+    }
+    .pricing-value {
+      font-size: 2.5rem;
+    }
+    .pricing-from,
+    .pricing-label,
+    .pricing-installment {
+      font-size: 0.8125rem;
+    }
+    .pricing-access {
+      font-size: 0.8125rem;
+      margin-bottom: 1.25rem;
+    }
+    .btn-pricing {
+      padding: 0.875rem 1.25rem;
+      min-height: 48px;
+      font-size: 0.9375rem;
+      margin-bottom: 0.75rem;
+    }
+    .pricing-guarantee {
+      font-size: 0.7rem;
+      margin-bottom: 1.25rem;
+    }
+    .pricing-divider {
+      margin-bottom: 1.25rem;
+    }
+    .pricing-receives {
+      font-size: 0.9375rem;
+      margin-bottom: 1rem;
+    }
+    .pricing-features-grid {
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+    .pricing-feature-item {
+      padding: 0.7rem 0.875rem;
+      font-size: 0.8125rem;
+    }
+    .pricing-value-box {
+      padding: 1rem 1rem;
+      border-radius: 0.75rem;
+    }
+    .pricing-value-box p {
+      font-size: 0.875rem;
+    }
+    .pricing-savings {
+      font-size: 0.8125rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pricing-card {
+      padding: 1.25rem 1rem;
+      border-radius: 1rem;
+    }
+    .pricing-value {
+      font-size: 2.25rem;
+    }
+    .pricing-feature-item {
+      padding: 0.65rem 0.75rem;
+      font-size: 0.75rem;
     }
   }
   
