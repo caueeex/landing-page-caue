@@ -58,7 +58,7 @@ if (leadForm) {
 
     // Monta a mensagem que será enviada no WhatsApp
     const message = [
-      'Olá, Matheus! Gostaria de agendar uma aula de handebol.',
+      'Olá, Matheus! Gostaria de comprar conteúdo de handebol.',
       '',
       '*Meus dados:*',
       'Nome: ' + name,
@@ -135,7 +135,7 @@ function highlightNavigation() {
       navButtons.forEach(btn => {
         btn.style.color = '';
         const text = btn.textContent.trim().toLowerCase();
-        if (text === sectionId || (sectionId === 'inscricao' && (text.includes('agendar') || text === 'inscrição'))) {
+        if (text === sectionId || (sectionId === 'inscricao' && (text.includes('comprar') || text === 'inscrição'))) {
           btn.style.color = 'hsl(45, 100%, 50%)';
         }
       });
