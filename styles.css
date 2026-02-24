@@ -1091,9 +1091,18 @@
     .cta-section .container {
       padding-left: 1rem;
       padding-right: 1rem;
+      width: 100%;
+      max-width: 100%;
     }
     .cta-container {
       gap: 2rem;
+      width: 100%;
+    }
+    .cta-container .pricing-card {
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
     }
     .cta-content h2 {
       font-size: 1.5rem;
@@ -1183,6 +1192,9 @@
   
   /* Pricing card (valores do material) - layout moderno */
   .pricing-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     background: linear-gradient(180deg, hsla(0, 0%, 100%, 0.98) 0%, hsla(0, 0%, 100%, 0.95) 100%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
